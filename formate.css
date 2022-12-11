@@ -1,0 +1,144 @@
+header {
+    text-align: center;
+    padding: 30px 30px 30px 30px;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+body {
+    background-color: rgb(46,46,46);
+    color: beige;
+    font-family: 'Poppins', sans-serif;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#page_content{
+    text-align:center;
+    transition: margin-left .5s;
+    margin: 2.5%;
+}
+
+#bild{
+    max-width: 100%;
+    margin-top: 40px;
+    width: 200px;
+}
+
+/*Navigationsleiste*/
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#navbar a:hover {
+    background-color: beige;
+    color: black;
+}
+
+#navbar a.active {
+    background-color: deepskyblue;
+    color: black;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .page_content {
+    padding-top: 60px;
+}
+
+
+/* Kontakt */
+/* Three columns side by side */
+.column {
+    float: left;
+    width: 32%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 800px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.container {
+    padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: grey;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    font-size: 15px;
+    color: black;
+    background-color: deepskyblue;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: beige;
+}
+
+
+/* Footer */
+footer {
+    box-sizing: border-box;
+    float: left;
+    font-size: 12px;
+    text-align: center;
+    margin: 1% 20%;
+    color:gray;
+    position: relative;
+    bottom: 0;
+}
