@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Symptom-Checker</title>
+    <meta name =" author " content = " Simone Gerner, Vivienne Heise, Jacqueline Meyer " >
+    <meta name = " creator " content = " Simone Gerner, Vivienne Heise, Jacqueline Meyer " >
+    <meta name = " publisher " content =" HAWK HHG " >
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type ="text/css" href="formate.css">
+</head>
+<body>
+<header>
+    <h1> Kontakt </h1>
+</header>
+
+<!-- Navigationsleiste -->
+<div id="navbar">
+  <a href="startseite.html">Home</a>
+    <a href="arztsuche.html">Arztsuche</a>
+  <a class="active" href="kontakt.html">Kontakt</a>
+</div>
+
+<!-- Seiteninhalt -->
+<div id="page_content">
+
+    <!-- https://www.w3schools.com/howto/howto_css_team.asp -->
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="https://www.shutterstock.com/image-photo/very-stressed-business-woman-female-600w-2138297579.jpg" alt="Simone" style="width:100%">
+                <div class="container">
+                    <h2>Simone Gerner</h2>
+                    <p class="title">CEO &amp; Founder</p>
+                    <p>Funktionsbeschreibung.</p>
+                    <p>example@example.com</p>
+                    <p><button class="button">Kontaktieren</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="https://www.shutterstock.com/image-photo/laughing-girl-daisy-her-hairs-600w-309067889.jpg" alt="Vivienne" style="width:100%">
+                <div class="container">
+                    <h2>Vivienne Heise</h2>
+                    <p class="title">Art Director</p>
+                    <p>Funktionsbeschreibung.</p>
+                    <p>example@example.com</p>
+                    <p><button class="button">Kontaktieren</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="https://www.shutterstock.com/image-photo/overwhelmed-woman-working-messy-office-600w-1925156357.jpg" alt="Jacqueline" style="width:100%">
+                <div class="container">
+                    <h2>Jacqueline Meyer</h2>
+                    <p class="title">Designer</p>
+                    <p>Funktionsbeschreibung.</p>
+                    <p>example@example.com</p>
+                    <p><button class="button">Kontaktieren</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Menüleiste bleibt beim scrollen oben stehen -->
+<script>
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
+
+<!-- Footer -->
+<footer>
+  <p> Autoren: Simone Gerner, Vivienne Heise, Jacqueline Meyer, Modul: Digitale Diagnostik 2, Dozent: Manuel Nietert, Wintersemester 22/23, HAWK </p>
+</footer>
+
+</body>
+</html>
