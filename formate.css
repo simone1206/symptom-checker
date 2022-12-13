@@ -38,6 +38,8 @@ h2 {
     width: 200px;
 }
 
+/*-----------------------------------------------------------------------------------------------------------*/
+
 /*Navigationsleiste*/
 #navbar {
     overflow: hidden;
@@ -53,6 +55,7 @@ h2 {
     text-decoration: none;
     font-size: 17px;
 }
+
 
 #navbar a:hover {
     background-color: beige;
@@ -74,6 +77,35 @@ h2 {
     padding-top: 60px;
 }
 
+/*-----------------------------------------------------------------------------------------------------------*/
+
+/* Arztsuche */
+.form-control {
+    width: 50%;
+    height: 34px;
+    padding: 6px 12px;
+    margin: 10px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: gray;
+    background-color: beige;
+    background-image: none;
+    border: 1px solid gray;
+}
+.button_suche {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    margin: 10px;
+    font-size: 15px;
+    color: black;
+    background-color: deepskyblue;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
 
 /* Kontakt */
 /* Three columns side by side */
@@ -130,6 +162,7 @@ h2 {
     background-color: beige;
 }
 
+/*-----------------------------------------------------------------------------------------------------------*/
 
 /* Footer */
 footer {
@@ -139,6 +172,6 @@ footer {
     text-align: center;
     margin: 1% 20%;
     color:gray;
-    position: relative;
+    position: relative; /*das hier noch ändern!!*/
     bottom: 0;
 }
