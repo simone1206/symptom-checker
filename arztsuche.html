@@ -24,7 +24,207 @@
 
 <!-- Seiteninhalt -->
 <div class="center" id="page_content">
-    Hier kann man nach Ärzten suchen!
+
+    <!-- kopiert und angepasst von: https://www.arzt-auskunft.de/arzt-auskunft/suche_sn/index.js?a=FS1 am 13.12.22-->
+
+    <div class="container"><!--  header end  -->
+
+        <!-- Content Row -->
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8" style="text-align:center; padding:2em 0 0 0;">
+
+                <form action="https://www.arzt-auskunft.de/Arzt-Auskunft/Suche_SN/index.js" method="get">
+
+                    <div class="well">
+
+                        <input type="hidden" name="a" value="DL">
+
+
+                        <!-- Ft Form Container -->
+                        <script>
+                            $.ui.autocomplete.prototype._renderItem = function (ul, item) {
+                                item.label = item.label.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)(" + $.ui.autocomplete.escapeRegex(this.term) + ")(?![^<>]*>)(?![^&;]+;)", "gi"), '<strong style="color:#1c58a5">$1</strong>');
+                                return $("<li></li>")
+                                    .data("item.autocomplete", item)
+                                    .append("<a>" + item.label + "</a>")
+                                    .appendTo(ul);
+                            };
+
+                            $.widget( "custom.catcomplete", $.ui.autocomplete, {
+                                _create: function() {
+                                    this._super();
+                                    this.widget().menu( "option", "items", "> :not(.ui-autocomplete-category)" );
+                                },
+                                _renderMenu: function( ul, items ) {
+                                    var that = this,
+                                        currentCategory = "";
+                                    $.each( items, function( index, item ) {
+                                        var li;
+
+                                        if ( item.type == 'category' ) {
+                                            ul.append( "<li class='ui-autocomplete-category'>" + item.label + "</li>" );
+                                        }
+                                        else {
+                                            li = that._renderItemData( ul, item );
+                                        }
+                                    });
+                                }
+                            });
+
+                            $(function() {
+                                $( "#Ft" ).catcomplete({
+                                    source: function( request, response ) {
+                                        $.ajax({
+                                            url: "https://www.arzt-auskunft.de/Arzt-Auskunft/Suche_SN/formAjax.js",
+                                            dataType: "jsonp",
+                                            data: {
+                                                Field: "Ft",
+                                                Db: "1",
+                                                F: request.term
+                                            },
+                                            success: function( data ) {
+                                                response( $.map( data, function( item ) {
+                                                    return {
+                                                        label: item.lbl,
+                                                        type: item.type,
+                                                        value: item.val
+                                                    }
+                                                }));
+                                            }
+                                        });
+                                    },
+                                    minLength: 1,
+                                    delay: 50,
+                                    focus: function( event, ui ) {
+                                        $( "#Ft" ).val( filterLabel(ui.item.label) );
+                                        return false;
+                                    },
+                                    select: function( event, ui ) {
+                                        $( "#Ft" ).val( filterLabel(ui.item.label) );
+                                        $( "#Ft_e" ).val( ui.item.value );
+
+                                        saveFormValue("Ft", $('#Ft').val(), "text");        // save value of field to sessionStorage
+                                        saveFormValue("Ft_e", ui.item.value, "text");      // save value of hidden field to sessionStorage
+                                        return false;
+                                    }
+                                })
+                            });
+
+                            function filterLabel(label) {
+                                label = label.replace(/<strong style="color:#1c58a5">/g,'');
+                                label = label.replace(/<\/strong>/g,'');
+                                return label;
+                            }
+
+                        </script>
+
+
+
+                        <div class="form-group">
+
+                            <label for="Ft" style=font-size:20px;"><span style="font-weight:bold; font-size:2rem;"> Was / Wen</span> suchen Sie (Arzt, Zahnarzt, Psychotherapeut, Klinik, Spezialisierung oder Name): </label>
+
+                            <input type="text" id="Ft" name="Ft" class="form-control ui-autocomplete-input" placeholder="z. B. Allgemeinmedizin oder Meier" onchange="saveFormValue(id, value, type)" autocomplete="off">
+                            <input type="hidden" id="Ft_e" name="Ft_e" value="">
+
+
+                        </div><br>
+
+                        <!-- Ftg Form Container -->
+                        <script>
+                            $.ui.autocomplete.prototype._renderItem = function (ul, item) {
+                                item.label = item.label.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)(" + $.ui.autocomplete.escapeRegex(this.term) + ")(?![^<>]*>)(?![^&;]+;)", "gi"), '<strong style="color:#1c58a5">$1</strong>');
+                                return $("<li></li>")
+                                    .data("item.autocomplete", item)
+                                    .append("<a>" + item.label + "</a>")
+                                    .appendTo(ul);
+                            };
+
+                            $.widget( "custom.catcomplete", $.ui.autocomplete, {
+                                _create: function() {
+                                    this._super();
+                                    this.widget().menu( "option", "items", "> :not(.ui-autocomplete-category)" );
+                                },
+                                _renderMenu: function( ul, items ) {
+                                    var that = this,
+                                        currentCategory = "";
+                                    $.each( items, function( index, item ) {
+                                        var li;
+
+                                        if ( item.type == 'category' ) {
+                                            ul.append( "<li class='ui-autocomplete-category'>" + item.label + "</li>" );
+                                        }
+                                        else {
+                                            li = that._renderItemData( ul, item );
+                                        }
+                                    });
+                                }
+                            });
+
+                            $(function() {
+                                $( "#Ftg" ).catcomplete({
+                                    source: function( request, response ) {
+                                        $.ajax({
+                                            url: "https://www.arzt-auskunft.de/Arzt-Auskunft/Suche_SN/formAjax.js",
+
+                                            dataType: "jsonp",
+                                            data: {
+                                                Field: "Ftg",
+                                                Db: "1",
+                                                F: request.term
+                                            },
+                                            success: function( data ) {
+                                                response( $.map( data, function( item ) {
+                                                    return {
+                                                        label: item.lbl,
+                                                        type: item.type,
+                                                        value: item.val
+                                                    }
+                                                }));
+                                            }
+                                        });
+                                    },
+                                    minLength: 1,
+                                    focus: function( event, ui ) {
+                                        $( "#Ftg" ).val( filterLabel(ui.item.label) );
+                                        return false;
+                                    },
+                                    select: function( event, ui ) {
+                                        $( "#Ftg" ).val( filterLabel(ui.item.label) );
+                                        $( "#Ftg_e" ).val( ui.item.value );
+
+                                        saveFormValue("Ftg", $('#Ftg').val(), "text");      // save value of field to sessionStorage
+                                        saveFormValue("Ftg_e", ui.item.value, "text");      // save value of hidden field to sessionStorage
+                                        return false;
+                                    }
+                                })
+                            });
+
+                            function filterLabel(label) {
+                                label = label.replace(/<strong style="color:#1c58a5">/g,'');
+                                label = label.replace(/<\/strong>/g,'');
+                                return label;
+                            }
+                        </script>
+
+
+                        <div class="form-group">
+
+                            <label for="Ftg"  style=font-size:20px;"><span style="font-weight:bold; font-size:2rem;"> Wo</span> suchen Sie (PLZ, Ort oder Stadtteil): </label>
+
+                            <input type="text" class="form-control ui-autocomplete-input" id="Ftg" name="Ftg" value="" placeholder="z. B. 22765 oder Hamburg" required="" onchange="saveFormValue(id, value, type)" autocomplete="off"> </a>
+                            <input type="hidden" id="Ftg_e" name="Ftg_e" value="">
+                        </div>
+
+
+                        </script>
+                       <button class="button_suche">Suchen</button> <!--type="submit"-->
+
+
+                    </div> <!--  end well  -->
+
+                </form>
 </div>
 
 <!-- Menüleiste bleibt beim scrollen oben stehen -->
@@ -45,7 +245,7 @@
 
 <!-- Footer -->
 <footer>
-    <p> Autoren: Simone Gerner, Vivienne Heise, Jacqueline Meyer, Modul: Digitale Diagnostik 2, Dozent: Nietert, Wintersemester 22/23, HAWK </p>
+    <p> Autoren: Simone Gerner, Vivienne Heise, Jacqueline Meyer, Modul: Digitale Diagnostik 2, Dozent: Manuel Nietert, Wintersemester 22/23, HAWK </p>
 </footer>
 
 </body>
