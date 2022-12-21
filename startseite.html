@@ -32,34 +32,33 @@
 
 <!-- linke Seite -->
 <div class="nav-links box" id="page_left">
-    <h2> Körperteil wählen </h2>
 
-    <p><button onclick="show_bodypart(this.id)" class="button" id="kopf">Kopf</button></p>
-    <p><button onclick="show_bodypart(this.id)" class="button" id="hals">Hals/Nacken</button></p>
-    <p><button onclick="show_bodypart(this.id)" class="button" id="bauch">Brust/Bauch</button></p>
-    <p><button onclick="show_bodypart(this.id)" class="button" id="unterleib">Unterleib</button></p>
-    <p><button onclick="show_bodypart(this.id)" class="button" id="arm">Arme</button></p>
-    <p><button onclick="show_bodypart(this.id)" class="button" id="hand">Hände</button></p>
-    <p><button onclick="show_bodypart(this.id)" class="button" id="bein">Beine</button></p>
-    <p><button onclick="show_bodypart(this.id)" class="button" id="fuss">Füße</button></p>
-    <p><button onclick="show_bodypart(this.id)" class="button" id="haut">Haut</button></p>
+    <p><button onclick="show_bodypart(this.id)" class="button_bodypart" id="kopf">Kopf</button></p>
+    <p><button onclick="show_bodypart(this.id)" class="button_bodypart" id="hals">Hals/Nacken</button></p>
+    <p><button onclick="show_bodypart(this.id)" class="button_bodypart" id="bauch">Brust/Bauch</button></p>
+    <p><button onclick="show_bodypart(this.id)" class="button_bodypart" id="unterleib">Unterleib</button></p>
+    <p><button onclick="show_bodypart(this.id)" class="button_bodypart" id="arm">Arme</button></p>
+    <p><button onclick="show_bodypart(this.id)" class="button_bodypart" id="hand">Hände</button></p>
+    <p><button onclick="show_bodypart(this.id)" class="button_bodypart" id="bein">Beine</button></p>
+    <p><button onclick="show_bodypart(this.id)" class="button_bodypart" id="fuss">Füße</button></p>
+    <p><button onclick="show_bodypart(this.id)" class="button_bodypart" id="haut">Haut</button></p>
 
 </div>
 
 <!-- Seiteninhalt -->
 <div class="box" id="page_content_start">
 
+    <!-- Geschlecht wählen -->
     <!-- Icons: https://www.w3schools.com/icons/default.asp 20.12.22 -->
     <button onclick="select_gender(this.id)" class="button_suche" id="male"><i class="fa fa-mars"></i></button>
     <button onclick="select_gender(this.id)" class="button_suche" id="female"><i class="fa fa-venus"></i></button>
 
-
     <img alt="Anatomicus" class="center" id="bild" src="https://res01.dcmservice.de/widgets/anatomicus/img/anatomicus/man_body_00001.jpg">
 
-    <br>
-
+    <!-- Körper umdrehen -->
     <!-- Icons: https://www.w3schools.com/icons/default.asp 20.12.22 -->
     <button onclick="turn_body()" class="button_suche"><i class="fa fa-refresh"></i></button>
+
 
 
 </div>
@@ -67,7 +66,6 @@
 
 <!-- rechte Seite -->
 <div class="box" id="page_right">
-    <h2> Symptome </h2>
 
     <div id="symp_kopf" class="symptom-content">
         <a href="#link">Augenschmerzen</a>
