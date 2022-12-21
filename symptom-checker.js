@@ -21,7 +21,7 @@ function show_bodypart(id) {
     }
 
     //https://stackoverflow.com/questions/47517769/javascript-creating-a-switch-case-based-on-the-id-of-the-button-clicked am 19.12.22
-    switch (id) { //id vorne: 32-39 hinten:41-48
+    switch (id) { //id vorne: 31-39 hinten:41-48
         case "kopf":
             // Körperteil blau markiert
             document.getElementById("bild").setAttribute("src", "https://res01.dcmservice.de/widgets/anatomicus/img/anatomicus/man_body_00032.jpg");
@@ -64,6 +64,11 @@ function show_bodypart(id) {
             document.getElementById("bild").setAttribute("src", "https://res01.dcmservice.de/widgets/anatomicus/img/anatomicus/man_body_00039.jpg");
             document.getElementById('symp_fuss').style.visibility = 'visible';
             break;
+
+        case "haut":
+            document.getElementById("bild").setAttribute("src", "https://res01.dcmservice.de/widgets/anatomicus/img/anatomicus/man_body_00031.jpg");
+            document.getElementById('symp_haut').style.visibility = 'visible';
+            break;
     }
 
     //document.getElementById("bild").setAttribute("src", "https://res01.dcmservice.de/widgets/anatomicus/img/anatomicus/man_body_000" + variable + ".jpg");
@@ -93,6 +98,15 @@ function show_bodypart(id) {
 
 //geschlecht wählen
 function select_gender(id) {
+
+    //andere offene Symptomlisten wieder ausblenden
+    let symptoms = document.getElementsByClassName("symptom-content");
+    let i;
+    for (i = 0; i < symptoms.length; i++) {
+        let openSymptoms = symptoms[i];
+        openSymptoms.style.visibility = 'hidden';
+    }
+
     // noch machen: button ausgewählt farbe bleiben
     if (id == "male") {
         document.getElementById("bild").setAttribute("src", "https://res01.dcmservice.de/widgets/anatomicus/img/anatomicus/man_body_00001.jpg");
@@ -104,6 +118,15 @@ function select_gender(id) {
 
 // körper drehen
 function turn_body() {
+
+    //andere offene Symptomlisten wieder ausblenden
+    let symptoms = document.getElementsByClassName("symptom-content");
+    let i;
+    for (i = 0; i < symptoms.length; i++) {
+        let openSymptoms = symptoms[i];
+        openSymptoms.style.visibility = 'hidden';
+    }
+
     //mann
     if (document.getElementById("bild").src === "https://res01.dcmservice.de/widgets/anatomicus/img/anatomicus/man_body_00001.jpg") {
         document.getElementById("bild").setAttribute("src", "https://res01.dcmservice.de/widgets/anatomicus/img/anatomicus/man_body_00016.jpg");
