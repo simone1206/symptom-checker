@@ -1,6 +1,6 @@
 header {
     text-align: center;
-    padding: 30px 30px 30px 30px;
+    padding: 20px 30px 20px 30px;
     letter-spacing: 3px;
     font-size: 20px;
 }
@@ -19,6 +19,16 @@ h2 {
     letter-spacing: 1px;
 }
 
+.box{
+    box-sizing: border-box;
+    float: left;
+    margin: 2.5%;
+}
+
+.nav-links{
+    width: 20%;
+    text-align:center;
+}
 
 .center {
     display: block;
@@ -28,14 +38,27 @@ h2 {
 
 #page_content{
     text-align:center;
-    transition: margin-left .5s;
     margin: 2.5%;
+    transition: margin-left .5s;
+}
+
+#page_content_start{
+    text-align:center;
+    width: 45%;
+    transition: margin-left .5s;
 }
 
 #bild{
     max-width: 100%;
     margin-top: 40px;
     width: 200px;
+}
+
+
+#page_right{
+    text-align: left;
+    width: 20%;
+    transition: margin-left .5s;
 }
 
 /*-----------------------------------------------------------------------------------------------------------*/
@@ -78,6 +101,26 @@ h2 {
 }
 
 /*-----------------------------------------------------------------------------------------------------------*/
+/* Menü auf der rechten Seite auf Startseite */
+.symptom-content {
+    visibility: hidden;
+    position: absolute;
+    min-width: 160px;
+    overflow: auto;
+    z-index: 1;
+}
+
+.symptom-content a {
+    text-align: center;
+    color: beige;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.symptom-content a:hover {background-color: deepskyblue; color: black;}
+
+/*-----------------------------------------------------------------------------------------------------------*/
 
 /* Arztsuche */
 .form-control {
@@ -87,7 +130,7 @@ h2 {
     margin: 10px;
     font-size: 14px;
     line-height: 1.42857143;
-    color: gray;
+    color: black;
     background-color: beige;
     background-image: none;
     border: 1px solid gray;
@@ -103,6 +146,10 @@ h2 {
     background-color: deepskyblue;
     text-align: center;
     cursor: pointer;
+}
+
+.button_suche:hover {
+    background-color: beige;
 }
 
 /*-----------------------------------------------------------------------------------------------------------*/
@@ -172,6 +219,6 @@ footer {
     text-align: center;
     margin: 1% 20%;
     color:gray;
-    position: relative; /*das hier noch ändern!!*/
+    position: relative; /*static | relative | absolute | sticky | fixed*/
     bottom: 0;
 }

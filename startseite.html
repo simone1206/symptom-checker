@@ -8,7 +8,8 @@
     <meta name = " publisher " content =" HAWK HHG " >
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type ="text/css" href="formate.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Icons -->
+    <script src="symptom-checker.js"></script> <!-- Java Skript einbiden -->
 
 </head>
 
@@ -25,15 +26,96 @@
 </div>
 
 
+<!-- Noch machen: Startseite so machen, dass man nicht scrollen muss!!! -->
+
+
+
+<!-- linke Seite -->
+<div class="nav-links box" id="page_left">
+    <h2> Körperteil wählen </h2>
+
+    <p><button onclick="show_bodypart(this.id)" class="button" id="kopf">Kopf</button></p>
+    <p><button onclick="show_bodypart(this.id)" class="button" id="hals">Hals/Nacken</button></p>
+    <p><button onclick="show_bodypart(this.id)" class="button" id="bauch">Brust/Bauch</button></p>
+    <p><button onclick="show_bodypart(this.id)" class="button" id="unterleib">Unterleib</button></p>
+    <p><button onclick="show_bodypart(this.id)" class="button" id="arm">Arme</button></p>
+    <p><button onclick="show_bodypart(this.id)" class="button" id="hand">Hände</button></p>
+    <p><button onclick="show_bodypart(this.id)" class="button" id="bein">Beine</button></p>
+    <p><button onclick="show_bodypart(this.id)" class="button" id="fuss">Füße</button></p>
+
+</div>
 
 <!-- Seiteninhalt -->
-<div class="center" id="page_content">
-   Das hier ist unser super cooler Symptome-Checker!
+<div class="box" id="page_content_start">
+    <p> Das hier ist unser super cooler Symptome-Checker! </p>
 
-  <img alt="Anatomicus" class="center" id="bild"
-        src="https://res01.dcmservice.de/widgets/anatomicus/img/anatomicus/man_body_00001.jpg">
+    <!-- Icons: https://www.w3schools.com/icons/default.asp 20.12.22 -->
+    <button onclick="select_gender(this.id)" class="button_suche" id="male"><i class="fa fa-mars"></i></button>
+    <button onclick="select_gender(this.id)" class="button_suche" id="female"><i class="fa fa-venus"></i></button>
 
-    <!-- Das muss hier rein: https://res01.dcmservice.de/widgets/anatomicus/ -->
+
+    <img alt="Anatomicus" class="center" id="bild" src="https://res01.dcmservice.de/widgets/anatomicus/img/anatomicus/man_body_00001.jpg">
+
+    <br>
+
+    <!-- Icons: https://www.w3schools.com/icons/default.asp 20.12.22 -->
+    <button onclick="turn_body()" class="button_suche"><i class="fa fa-refresh"></i></button>
+
+
+</div>
+
+
+<!-- rechte Seite -->
+<div class="box" id="page_right">
+    <h2> Symptome </h2>
+
+    <div id="symp_kopf" class="symptom-content">
+        <a href="#home">Symptom_kopf</a>
+        <a href="#about">Symptom_kopf</a>
+        <a href="#contact">Symptom_kopf</a>
+    </div>
+
+    <div id="symp_hals" class="symptom-content">
+        <a href="#home">Symptom_hals</a>
+        <a href="#about">Symptom_hals</a>
+        <a href="#contact">Symptom_hals</a>
+    </div>
+
+    <div id="symp_arm" class="symptom-content">
+        <a href="#home">Symptom_arm</a>
+        <a href="#about">Symptom_arm</a>
+        <a href="#contact">Symptom_arm</a>
+    </div>
+
+    <div id="symp_bauch" class="symptom-content">
+        <a href="#home">Symptom_bauch</a>
+        <a href="#about">Symptom_bauch</a>
+        <a href="#contact">Symptom_bauch</a>
+    </div>
+
+    <div id="symp_unterleib" class="symptom-content">
+        <a href="#home">Symptom_unterleib</a>
+        <a href="#about">Symptom_unterleib</a>
+        <a href="#contact">Symptom_unterleib</a>
+    </div>
+
+    <div id="symp_hand" class="symptom-content">
+        <a href="#home">Symptom_hand</a>
+        <a href="#about">Symptom_hand</a>
+        <a href="#contact">Symptom_hand</a>
+    </div>
+
+    <div id="symp_bein" class="symptom-content">
+        <a href="#home">Symptom_bein</a>
+        <a href="#about">Symptom_bein</a>
+        <a href="#contact">Symptom_bein</a>
+    </div>
+
+    <div id="symp_fuss" class="symptom-content">
+        <a href="#home">Symptom_fuss</a>
+        <a href="#about">Symptom_fuss</a>
+        <a href="#contact">Symptom_fuss</a>
+    </div>
 
 </div>
 
@@ -58,7 +140,7 @@
 
 <!-- Footer -->
 <footer>
-    <p> Autoren: Simone Gerner, Vivienne Heise, Jacqueline Meyer, Modul: Digitale Diagnostik 2, Dozent: Nietert, Wintersemester 22/23, HAWK </p>
+    <p> Autoren: Simone Gerner, Vivienne Heise, Jacqueline Meyer, Modul: Digitale Diagnostik 2, Dozent: Manuel Nietert, Wintersemester 22/23, HAWK </p>
 </footer>
 
 </body>
