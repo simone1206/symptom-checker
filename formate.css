@@ -1,3 +1,6 @@
+html { /*https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2 am 21.12.22*/
+    scroll-behavior: smooth;
+}
 header {
     text-align: center;
     padding: 20px 30px 20px 30px;
@@ -90,7 +93,7 @@ h3 {
 .sticky {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 90%;
 }
 
 .sticky + .page_content {
@@ -175,7 +178,6 @@ h3 {
     font-size: 17px;
 }
 
-
 #sub_navbar a:hover {
     background-color: beige;
     color: black;
@@ -187,7 +189,8 @@ h3 {
 }
 
 #page_content_symptome{
-    padding: 0px 10px;
+    padding: 2.5% 10%;
+    line-height: 1.5;
 }
 
 /*-----------------------------------------------------------------------------------------------------------*/
