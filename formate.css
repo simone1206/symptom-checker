@@ -20,6 +20,7 @@ h2 {
 }
 
 h3 {
+    text-align: center;
     font-size: 20px;
     letter-spacing: 1px;
 }
@@ -30,10 +31,6 @@ h3 {
     margin: 2.5%;
 }
 
-.nav-links{
-    width: 20%;
-    text-align:center;
-}
 
 .center {
     display: block;
@@ -53,11 +50,6 @@ h3 {
     transition: margin-left .5s;
 }
 
-#page_content_symptome{
-    text-align:left;
-    margin: 2.5%;
-    transition: margin-left .5s;
-}
 
 #bild{
     max-width: 100%;
@@ -65,12 +57,6 @@ h3 {
     width: 200px;
 }
 
-
-#page_right{
-    text-align: left;
-    width: 20%;
-    transition: margin-left .5s;
-}
 
 /*-----------------------------------------------------------------------------------------------------------*/
 
@@ -83,7 +69,7 @@ h3 {
 #navbar a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: beige;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -113,6 +99,11 @@ h3 {
 
 /*-----------------------------------------------------------------------------------------------------------*/
 /* Menü auf der linken Seite auf Startseite */
+.nav-links{
+    width: 20%;
+    text-align:center;
+}
+
 .button_bodypart {
     background-color: rgb(46,46,46);
     border: 2px solid deepskyblue;
@@ -138,6 +129,12 @@ h3 {
 
 /*-----------------------------------------------------------------------------------------------------------*/
 /* Menü auf der rechten Seite auf Startseite */
+#page_right{
+    text-align: left;
+    width: 20%;
+    transition: margin-left .5s;
+}
+
 .symptom-content {
     visibility: hidden;
     position: absolute;
@@ -155,6 +152,43 @@ h3 {
 }
 
 .symptom-content a:hover {background-color: beige; color: black;}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+/*Symptome Unterseiten*/
+.liste{
+    margin-left: 10%;
+}
+
+#sub_navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+#sub_navbar a {
+    float: left;
+    width: 22%;
+    display: block;
+    color: beige;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+#sub_navbar a:hover {
+    background-color: beige;
+    color: black;
+}
+
+#sub_navbar a.active {
+    background-color: deepskyblue;
+    color: black;
+}
+
+#page_content_symptome{
+    padding: 0px 10px;
+}
 
 /*-----------------------------------------------------------------------------------------------------------*/
 

@@ -8,7 +8,7 @@ function show_bodypart(id) {
     //https://www.w3schools.com/howto/howto_js_tabs.asp am 21.12.22
     let temp_deactive = document.getElementsByClassName("button_bodypart");
     for (j = 0; j < temp_deactive.length; j++) {
-        temp_deactive[j].className = temp_deactive[j].className.replace(" active", "");
+        temp_deactive[j].className = temp_deactive[j].className.replace(" button_bodypart_active", "");
     }
 
 
@@ -31,55 +31,55 @@ function show_bodypart(id) {
             document.getElementById('symp_kopf').style.visibility = 'visible';
 
             //Button markieren
-            event.currentTarget.className += " active";
+            event.currentTarget.className += " button_bodypart_active";
             break;
 
         case "hals":
             document.getElementById("bild").setAttribute("src", "https://res01.dcmservice.de/widgets/anatomicus/img/anatomicus/man_body_00033.jpg");
             document.getElementById('symp_hals').style.visibility = 'visible';
-            event.currentTarget.className += " active";
+            event.currentTarget.className += " button_bodypart_active";
             break;
 
         case "arm":
             document.getElementById("bild").setAttribute("src", "https://res01.dcmservice.de/widgets/anatomicus/img/anatomicus/man_body_00034.jpg");
             document.getElementById('symp_arm').style.visibility = 'visible';
-            event.currentTarget.className += " active";
+            event.currentTarget.className += " button_bodypart_active";
             break;
 
         case "bauch":
             document.getElementById("bild").setAttribute("src", "https://res01.dcmservice.de/widgets/anatomicus/img/anatomicus/man_body_00035.jpg");
             document.getElementById('symp_bauch').style.visibility = 'visible';
-            event.currentTarget.className += " active";
+            event.currentTarget.className += " button_bodypart_active";
             break;
 
         case "unterleib":
             document.getElementById("bild").setAttribute("src", "https://res01.dcmservice.de/widgets/anatomicus/img/anatomicus/man_body_00036.jpg");
             document.getElementById('symp_unterleib').style.visibility = 'visible';
-            event.currentTarget.className += " active";
+            event.currentTarget.className += " button_bodypart_active";
             break;
 
         case "hand":
             document.getElementById("bild").setAttribute("src", "https://res01.dcmservice.de/widgets/anatomicus/img/anatomicus/man_body_00037.jpg");
             document.getElementById('symp_hand').style.visibility = 'visible';
-            event.currentTarget.className += " active";
+            event.currentTarget.className += " button_bodypart_active";
             break;
 
         case "bein":
             document.getElementById("bild").setAttribute("src", "https://res01.dcmservice.de/widgets/anatomicus/img/anatomicus/man_body_00038.jpg");
             document.getElementById('symp_bein').style.visibility = 'visible';
-            event.currentTarget.className += " active";
+            event.currentTarget.className += " button_bodypart_active";
             break;
 
         case "fuss":
             document.getElementById("bild").setAttribute("src", "https://res01.dcmservice.de/widgets/anatomicus/img/anatomicus/man_body_00039.jpg");
             document.getElementById('symp_fuss').style.visibility = 'visible';
-            event.currentTarget.className += " active";
+            event.currentTarget.className += " button_bodypart_active";
             break;
 
         case "haut":
             document.getElementById("bild").setAttribute("src", "https://res01.dcmservice.de/widgets/anatomicus/img/anatomicus/man_body_00031.jpg");
             document.getElementById('symp_haut').style.visibility = 'visible';
-            event.currentTarget.className += " active";
+            event.currentTarget.className += " button_bodypart_active";
             break;
     }
 
