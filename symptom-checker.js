@@ -1,15 +1,7 @@
 function show_bodypart(id) {
     //Masterplan: switch:id case:variable = nummer -> document.getElement...."https://.... + variable"
-    // next step: switch case mit variablen und einem veränderbaren link ganz unten
-    // optinal: anstelle von buttons koordinatenfelder definieren
-
-    // next step: variable ansicht? if ansicht = vorn -> switch case mit id vorne else -> switch case mit id hinten ??
-    // next step: mit bildern von frau wiederholen -> link mit variable ändern? -> oder ohne anklicken bei frau??
-
-    /*    if (document.getElementsByClassName('symptom-content')[0].style.visibility === 'visible'){
-            document.getElementsByClassName('symptom-content')[0].style.visibility = 'hidden';
-        }*/
-
+    // optional: switch case mit variablen und einem veränderbaren link ganz unten
+    // next step: anstelle von buttons koordinatenfelder definieren
 
     //andere offene Symptomlisten wieder ausblenden
     //https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown am 20.12.22
