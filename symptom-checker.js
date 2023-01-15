@@ -1,9 +1,4 @@
 function show_bodypart(id) {
-    //Masterplan: switch:id case:variable = nummer -> document.getElement...."https://.... + variable"
-    // optional: switch case mit variablen und einem veränderbaren link ganz unten
-    // next step: anstelle von buttons koordinatenfelder definieren
-
-
     //andere Buttons nicht mehr markiert
     //https://www.w3schools.com/howto/howto_js_tabs.asp am 21.12.22
     let temp_deactive = document.getElementsByClassName("button_bodypart");
@@ -83,29 +78,6 @@ function show_bodypart(id) {
             break;
     }
 
-    //document.getElementById("bild").setAttribute("src", "https://res01.dcmservice.de/widgets/anatomicus/img/anatomicus/man_body_000" + variable + ".jpg");
-
-
-    //körperteile und entsprechende bildnummern
-    //kopf: 32
-    //hals:33
-    //arm: 34
-    //bauch: 35
-    //unterleib: 36
-    //hand:37
-    //bein:38
-    //fuss:39
-    /* "back"
-    (this.hoverZone("#head", 41),
-        this.hoverZone("#neck", 42),
-        this.hoverZone("#arms", 43),
-        this.hoverZone("#back", 44),
-        this.hoverZone("#abdomen", 45),
-        this.hoverZone("#hands", 46),
-        this.hoverZone("#legs", 47),
-        this.hoverZone("#feet", 48));*/
-
-
 }
 
 //geschlecht wählen
@@ -125,7 +97,7 @@ function select_gender(id) {
         openSymptoms.style.visibility = 'hidden';
     }
 
-    // noch machen: button ausgewählt farbe bleiben
+
     if (id == "male") {
         document.getElementById("bild").setAttribute("src", "https://res01.dcmservice.de/widgets/anatomicus/img/anatomicus/man_body_00001.jpg");
     } else if (id == "female") {
